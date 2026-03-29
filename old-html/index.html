@@ -1,0 +1,735 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>VoiceFlow India — AI Voice Keyboard for Bharat | Speak in Tamil, Hindi, Telugu & More</title>
+  <meta name="description" content="VoiceFlow India is a system-wide AI voice keyboard that lets you dictate in Tamil, Hindi, Telugu, Kannada, Malayalam and 5 more Indian languages. Press a hotkey, speak naturally, and get perfectly formatted text in any app.">
+  <meta name="keywords" content="voice typing, Indian languages, Tamil voice keyboard, Hindi dictation, Telugu voice input, AI keyboard, speech to text India">
+  <meta property="og:title" content="VoiceFlow India — AI Voice Keyboard for Bharat">
+  <meta property="og:description" content="Speak in any Indian language. Get perfectly formatted text anywhere. Works in WhatsApp, Gmail, VS Code — every app on your device.">
+  <meta property="og:type" content="website">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Outfit:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- ==================== NAVIGATION ==================== -->
+  <nav class="nav" id="nav">
+    <div class="container nav-inner">
+      <a href="#" class="nav-logo">
+        <div class="nav-logo-icon">
+          <svg viewBox="0 0 32 32" width="32" height="32" fill="none">
+            <defs>
+              <linearGradient id="navGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stop-color="#6C5CE7"/>
+                <stop offset="100%" stop-color="#a855f7"/>
+              </linearGradient>
+            </defs>
+            <circle cx="16" cy="16" r="15" fill="url(#navGrad)" opacity="0.15"/>
+            <path d="M16 6a4 4 0 0 0-4 4v6a4 4 0 0 0 8 0v-6a4 4 0 0 0-4-4z" stroke="url(#navGrad)" stroke-width="2.5" fill="none"/>
+            <path d="M22 14v2a6 6 0 0 1-12 0v-2" stroke="url(#navGrad)" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+            <line x1="16" y1="22" x2="16" y2="26" stroke="url(#navGrad)" stroke-width="2.5" stroke-linecap="round"/>
+          </svg>
+        </div>
+        <span class="nav-logo-text">VoiceFlow<span class="nav-logo-accent"> India</span></span>
+      </a>
+      <div class="nav-links" id="navLinks">
+        <a href="#features" class="nav-link">Features</a>
+        <a href="#how-it-works" class="nav-link">How It Works</a>
+        <a href="#languages" class="nav-link">Languages</a>
+        <a href="#pricing" class="nav-link">Pricing</a>
+        <a href="#faq" class="nav-link">FAQ</a>
+      </div>
+      <div class="nav-actions">
+        <a href="#pricing" class="btn btn-ghost">Login</a>
+        <a href="#pricing" class="btn btn-primary">Get Started Free</a>
+      </div>
+      <button class="nav-mobile-toggle" id="mobileToggle" aria-label="Toggle navigation">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ==================== HERO ==================== -->
+  <section class="hero" id="hero">
+    <div class="hero-bg-effects">
+      <div class="hero-gradient-orb hero-orb-1"></div>
+      <div class="hero-gradient-orb hero-orb-2"></div>
+      <div class="hero-gradient-orb hero-orb-3"></div>
+      <div class="hero-grid-overlay"></div>
+    </div>
+
+    <div class="container hero-content">
+      <div class="hero-badge">
+        <span class="hero-badge-dot"></span>
+        <span>Now available as Chrome Extension • Android coming soon</span>
+      </div>
+
+      <h1 class="hero-title">
+        Speak in Your<br>
+        <span class="hero-title-gradient">Mother Tongue.</span><br>
+        Type Everywhere.
+      </h1>
+
+      <p class="hero-subtitle">
+        VoiceFlow India is the AI voice keyboard for Bharat. Press a hotkey, speak naturally in 
+        <strong>Tamil, Hindi, Telugu, Kannada, Malayalam</strong> — and get perfectly formatted text 
+        injected into <em>any</em> app. WhatsApp, Gmail, VS Code, Notion — everywhere your cursor is.
+      </p>
+
+      <div class="hero-cta">
+        <a href="#pricing" class="btn btn-primary btn-lg">
+          <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"/><path d="M19 10v2a7 7 0 0 1-14 0v-2"/><line x1="12" y1="19" x2="12" y2="23"/></svg>
+          Start Dictating — Free
+        </a>
+        <a href="#how-it-works" class="btn btn-outline btn-lg">
+          Watch Demo
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+        </a>
+      </div>
+
+      <div class="hero-social-proof">
+        <div class="hero-avatars">
+          <div class="hero-avatar" style="background: linear-gradient(135deg, #6366f1, #8b5cf6);">R</div>
+          <div class="hero-avatar" style="background: linear-gradient(135deg, #ec4899, #f43f5e);">P</div>
+          <div class="hero-avatar" style="background: linear-gradient(135deg, #14b8a6, #06b6d4);">A</div>
+          <div class="hero-avatar" style="background: linear-gradient(135deg, #f59e0b, #ef4444);">S</div>
+          <div class="hero-avatar" style="background: linear-gradient(135deg, #10b981, #059669);">K</div>
+        </div>
+        <div class="hero-proof-text">
+          <strong>500+</strong> beta testers across India
+          <span class="hero-stars">★★★★★</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Hero Demo Visual (Wispr Flow style) -->
+    <div class="hero-demo-container">
+      <div class="container">
+        <div class="wispr-animation-wrapper">
+          
+          <!-- The curved SVG track where text flows -->
+          <div class="wispr-ribbon-container">
+            <svg class="wispr-ribbon-svg" viewBox="0 0 1000 200" preserveAspectRatio="none">
+              <!-- Dark base ribbon -->
+              <path id="wispr-path" d="M -100,100 C 200,20 600,180 1100,60" class="wispr-ribbon-track" />
+              <!-- Highlight glow behind text -->
+              <path d="M -100,100 C 200,20 600,180 1100,60" class="wispr-ribbon-glow" />
+            </svg>
+            
+            <!-- Continuous scrolling text along the path -->
+            <svg class="wispr-ribbon-text-svg" viewBox="0 0 1000 200" preserveAspectRatio="none">
+              <text class="wispr-text-element">
+                <textPath href="#wispr-path" startOffset="0%" id="wispr-textpath">
+                  ...the meeting is scheduled for tomorrow... I think we should probably... wait no, definitely push the deadline to Friday...
+                </textPath>
+              </text>
+            </svg>
+
+            <!-- Center Audio Capsule (Floating) -->
+            <div class="wispr-audio-capsule">
+              <div class="wispr-mic">
+                <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 2A3 3 0 009 5v7a3 3 0 106 0V5a3 3 0 00-3-3z"></path><path d="M19 10v2a7 7 0 01-14 0v-2"></path><line x1="12" y1="19" x2="12" y2="23"></line></svg>
+              </div>
+              <div class="wispr-waves">
+                <span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+              </div>
+            </div>
+
+            <!-- Floating AI Badges -->
+            <div class="wispr-badge badge-grammar">
+              <div class="badge-icon badge-green">
+                <svg viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              </div>
+              Grammar Corrected
+            </div>
+            
+            <div class="wispr-badge badge-filler">
+              <div class="badge-icon badge-teal">
+                <svg viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" stroke-width="3"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+              </div>
+              Removed "wait no"
+            </div>
+
+            <div class="wispr-badge badge-language">
+              <span class="badge-dot"></span>
+              Tamil + English detected
+            </div>
+            
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== TRUSTED BY / LOGOS ==================== -->
+  <section class="logos-section">
+    <div class="container">
+      <p class="logos-label">Works beautifully with your favorite apps</p>
+      <div class="logos-grid">
+        <div class="logo-item">
+          <span class="logo-icon">💬</span>
+          <span>WhatsApp</span>
+        </div>
+        <div class="logo-item">
+          <span class="logo-icon">📧</span>
+          <span>Gmail</span>
+        </div>
+        <div class="logo-item">
+          <span class="logo-icon">💻</span>
+          <span>VS Code</span>
+        </div>
+        <div class="logo-item">
+          <span class="logo-icon">📝</span>
+          <span>Notion</span>
+        </div>
+        <div class="logo-item">
+          <span class="logo-icon">🐦</span>
+          <span>Twitter/X</span>
+        </div>
+        <div class="logo-item">
+          <span class="logo-icon">💼</span>
+          <span>LinkedIn</span>
+        </div>
+        <div class="logo-item">
+          <span class="logo-icon">📄</span>
+          <span>Google Docs</span>
+        </div>
+        <div class="logo-item">
+          <span class="logo-icon">💬</span>
+          <span>Slack</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== FEATURES ==================== -->
+  <section class="features" id="features">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-badge">Features</span>
+        <h2 class="section-title">Everything You Need.<br><span class="gradient-text">Nothing You Don't.</span></h2>
+        <p class="section-subtitle">Built from the ground up for Indian languages. No compromises.</p>
+      </div>
+
+      <div class="features-grid">
+        <div class="feature-card feature-card-lg">
+          <div class="feature-icon-wrap">
+            <div class="feature-icon" style="background: linear-gradient(135deg, #6C5CE7, #a855f7);">
+              <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="white" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+            </div>
+          </div>
+          <h3>10 Indian Languages</h3>
+          <p>Tamil, Telugu, Hindi, Kannada, Malayalam, Marathi, Bengali, Gujarati, Punjabi, and English. With native Tanglish, Hinglish, and Tenglish mid-sentence code-switching support.</p>
+          <div class="feature-tags">
+            <span class="tag">தமிழ்</span>
+            <span class="tag">తెలుగు</span>
+            <span class="tag">हिन्दी</span>
+            <span class="tag">ಕನ್ನಡ</span>
+            <span class="tag">മലയാളം</span>
+          </div>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon" style="background: linear-gradient(135deg, #ec4899, #f43f5e);">
+            <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="white" stroke-width="2"><path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"/><path d="M19 10v2a7 7 0 0 1-14 0v-2"/><line x1="12" y1="19" x2="12" y2="23"/></svg>
+          </div>
+          <h3>System-Wide Dictation</h3>
+          <p>Works in every app. Press Ctrl+Shift+Space from WhatsApp, Gmail, VS Code, or anywhere — speak, and text appears at your cursor.</p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon" style="background: linear-gradient(135deg, #14b8a6, #06b6d4);">
+            <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="white" stroke-width="2"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
+          </div>
+          <h3>AI-Powered Cleanup</h3>
+          <p>Groq Whisper for STT + Llama 3.3 70B for post-processing. Removes fillers, fixes punctuation, handles self-corrections. Under 900ms end-to-end.</p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon" style="background: linear-gradient(135deg, #f59e0b, #ef4444);">
+            <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="white" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+          </div>
+          <h3>Context-Aware Formatting</h3>
+          <p>Automatically adjusts tone — casual for WhatsApp, formal for Gmail, technical for VS Code. The AI knows where you're typing.</p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon" style="background: linear-gradient(135deg, #8b5cf6, #6366f1);">
+            <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="white" stroke-width="2"><path d="M17 1l4 4-4 4"/><path d="M3 11V9a4 4 0 0 1 4-4h14"/><path d="M7 23l-4-4 4-4"/><path d="M21 13v2a4 4 0 0 1-4 4H3"/></svg>
+          </div>
+          <h3>Snippet Expansion</h3>
+          <p>Say "my address" and get your full address typed out. Create custom trigger phrases that expand into full text blocks instantly.</p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon" style="background: linear-gradient(135deg, #10b981, #059669);">
+            <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="white" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          </div>
+          <h3>Privacy-First</h3>
+          <p>Only audio is sent for processing. We never read your screen. Open-source content script. DPDP compliant. Optional offline mode for zero cloud processing.</p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon" style="background: linear-gradient(135deg, #3b82f6, #1d4ed8);">
+            <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="white" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/></svg>
+          </div>
+          <h3>Instant Undo</h3>
+          <p>Made a mistake? Hit Ctrl+Z within 5 seconds to revert. VoiceFlow remembers the previous state and restores it instantly. Zero fear of errors.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== HOW IT WORKS ==================== -->
+  <section class="how-it-works" id="how-it-works">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-badge">How It Works</span>
+        <h2 class="section-title">Three Steps.<br><span class="gradient-text">Under One Second.</span></h2>
+        <p class="section-subtitle">The fastest voice-to-text pipeline ever built for Indian languages.</p>
+      </div>
+
+      <div class="steps-grid">
+        <div class="step-card">
+          <div class="step-number">01</div>
+          <div class="step-visual">
+            <div class="step-kbd-group">
+              <kbd class="step-key">Ctrl</kbd>
+              <span>+</span>
+              <kbd class="step-key">Shift</kbd>
+              <span>+</span>
+              <kbd class="step-key">Space</kbd>
+            </div>
+          </div>
+          <h3>Press the Hotkey</h3>
+          <p>From any app, press your customizable hotkey. A sleek recording indicator appears. You never leave the app you're working in.</p>
+        </div>
+
+        <div class="step-connector">
+          <svg viewBox="0 0 100 20" width="100" height="20" fill="none">
+            <path d="M0 10 H90 L80 4 M90 10 L80 16" stroke="url(#stepGrad)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            <defs><linearGradient id="stepGrad" x1="0%" y1="0%" x2="100%" y2="0%"><stop offset="0%" stop-color="#6C5CE7"/><stop offset="100%" stop-color="#a855f7"/></linearGradient></defs>
+          </svg>
+        </div>
+
+        <div class="step-card">
+          <div class="step-number">02</div>
+          <div class="step-visual">
+            <div class="step-waveform">
+              <span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+            </div>
+            <div class="step-speech-bubble">"நாளைக்கு meeting confirm-ah?"</div>
+          </div>
+          <h3>Speak Naturally</h3>
+          <p>Talk in Tamil, Hindi, Telugu — even mix with English. No need to speak slowly or clearly. Our AI handles natural speech, fillers, and self-corrections.</p>
+        </div>
+
+        <div class="step-connector">
+          <svg viewBox="0 0 100 20" width="100" height="20" fill="none">
+            <path d="M0 10 H90 L80 4 M90 10 L80 16" stroke="url(#stepGrad2)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            <defs><linearGradient id="stepGrad2" x1="0%" y1="0%" x2="100%" y2="0%"><stop offset="0%" stop-color="#a855f7"/><stop offset="100%" stop-color="#ec4899"/></linearGradient></defs>
+          </svg>
+        </div>
+
+        <div class="step-card">
+          <div class="step-number">03</div>
+          <div class="step-visual">
+            <div class="step-result">
+              <span class="step-result-text">Tomorrow's meeting is confirmed ✓</span>
+              <div class="step-result-badge">Injected into WhatsApp</div>
+            </div>
+          </div>
+          <h3>Text Appears Instantly</h3>
+          <p>AI-cleaned, punctuated text is injected directly at your cursor. No copy-paste. No switching apps. It just works.</p>
+        </div>
+      </div>
+
+      <!-- Pipeline Diagram -->
+      <div class="pipeline-card">
+        <h3 class="pipeline-title">The AI Pipeline</h3>
+        <div class="pipeline-flow">
+          <div class="pipeline-step">
+            <div class="pipeline-icon">🎤</div>
+            <span>Audio Capture</span>
+            <small>16kHz PCM</small>
+          </div>
+          <div class="pipeline-arrow">→</div>
+          <div class="pipeline-step">
+            <div class="pipeline-icon">🔇</div>
+            <span>Silero VAD</span>
+            <small>On-device</small>
+          </div>
+          <div class="pipeline-arrow">→</div>
+          <div class="pipeline-step highlight">
+            <div class="pipeline-icon">🗣️</div>
+            <span>Groq Whisper</span>
+            <small>~300ms</small>
+          </div>
+          <div class="pipeline-arrow">→</div>
+          <div class="pipeline-step highlight">
+            <div class="pipeline-icon">🧠</div>
+            <span>Llama 3.3 70B</span>
+            <small>~400ms</small>
+          </div>
+          <div class="pipeline-arrow">→</div>
+          <div class="pipeline-step">
+            <div class="pipeline-icon">⌨️</div>
+            <span>Text Injection</span>
+            <small>Instant</small>
+          </div>
+        </div>
+        <div class="pipeline-latency">
+          <span class="pipeline-latency-label">Total Latency</span>
+          <span class="pipeline-latency-value">< 900ms</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== LANGUAGES ==================== -->
+  <section class="languages" id="languages">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-badge">Languages</span>
+        <h2 class="section-title">Made for<br><span class="gradient-text">Every Indian.</span></h2>
+        <p class="section-subtitle">10 Indian languages with native code-switching. Speak Tanglish, Hinglish, or Tenglish — we understand.</p>
+      </div>
+
+      <div class="lang-grid">
+        <div class="lang-card lang-featured">
+          <div class="lang-flag">🇮🇳</div>
+          <h3>Tamil <span class="lang-native">தமிழ்</span></h3>
+          <p>Full Tanglish support. "Meeting kupu potti irukka" → proper Tamil-English output.</p>
+          <span class="lang-tag">Tanglish ✓</span>
+        </div>
+        <div class="lang-card lang-featured">
+          <div class="lang-flag">🇮🇳</div>
+          <h3>Telugu <span class="lang-native">తెలుగు</span></h3>
+          <p>Native Tenglish code-switching. Technical terms preserved perfectly.</p>
+          <span class="lang-tag">Tenglish ✓</span>
+        </div>
+        <div class="lang-card lang-featured">
+          <div class="lang-flag">🇮🇳</div>
+          <h3>Hindi <span class="lang-native">हिन्दी</span></h3>
+          <p>Hinglish, Devanagari, romanized Hindi. All formats supported.</p>
+          <span class="lang-tag">Hinglish ✓</span>
+        </div>
+        <div class="lang-card">
+          <div class="lang-flag">🇮🇳</div>
+          <h3>Kannada <span class="lang-native">ಕನ್ನಡ</span></h3>
+          <p>Full Kannada + English support.</p>
+        </div>
+        <div class="lang-card">
+          <div class="lang-flag">🇮🇳</div>
+          <h3>Malayalam <span class="lang-native">മലയാളം</span></h3>
+          <p>Natural Malayalam dictation.</p>
+        </div>
+        <div class="lang-card">
+          <div class="lang-flag">🇮🇳</div>
+          <h3>Marathi <span class="lang-native">मराठी</span></h3>
+          <p>Devanagari script support.</p>
+        </div>
+        <div class="lang-card">
+          <div class="lang-flag">🇮🇳</div>
+          <h3>Bengali <span class="lang-native">বাংলা</span></h3>
+          <p>Bangla + English mixed.</p>
+        </div>
+        <div class="lang-card">
+          <div class="lang-flag">🇮🇳</div>
+          <h3>Gujarati <span class="lang-native">ગુજરાતી</span></h3>
+          <p>Business & casual Gujarati.</p>
+        </div>
+        <div class="lang-card">
+          <div class="lang-flag">🇮🇳</div>
+          <h3>Punjabi <span class="lang-native">ਪੰਜਾਬੀ</span></h3>
+          <p>Gurmukhi script support.</p>
+        </div>
+        <div class="lang-card">
+          <div class="lang-flag">🇬🇧</div>
+          <h3>English</h3>
+          <p>Indian English accent optimized.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== DOMAIN MODES ==================== -->
+  <section class="domains">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-badge">Domain Modes</span>
+        <h2 class="section-title">Context That<br><span class="gradient-text">Understands You.</span></h2>
+        <p class="section-subtitle">Switch domain modes to get perfectly formatted output for your profession.</p>
+      </div>
+
+      <div class="domain-grid">
+        <div class="domain-card">
+          <span class="domain-emoji">💬</span>
+          <h3>General</h3>
+          <p>Everyday conversations, social media, casual notes</p>
+        </div>
+        <div class="domain-card">
+          <span class="domain-emoji">🏥</span>
+          <h3>Medical</h3>
+          <p>Prescriptions, clinical notes, medical terms</p>
+        </div>
+        <div class="domain-card">
+          <span class="domain-emoji">⚖️</span>
+          <h3>Legal</h3>
+          <p>Case citations, legal language, statutes</p>
+        </div>
+        <div class="domain-card">
+          <span class="domain-emoji">💻</span>
+          <h3>Tech</h3>
+          <p>Variable names, APIs, technical docs</p>
+        </div>
+        <div class="domain-card">
+          <span class="domain-emoji">📊</span>
+          <h3>Business</h3>
+          <p>Reports, emails, proposals, financials</p>
+        </div>
+        <div class="domain-card">
+          <span class="domain-emoji">📚</span>
+          <h3>Education</h3>
+          <p>Lectures, notes, academic papers</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== PRICING ==================== -->
+  <section class="pricing" id="pricing">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-badge">Pricing</span>
+        <h2 class="section-title">Simple, Transparent<br><span class="gradient-text">Pricing.</span></h2>
+        <p class="section-subtitle">Start free. Upgrade when you need more power.</p>
+      </div>
+
+      <div class="pricing-grid">
+        <!-- Free Tier -->
+        <div class="pricing-card">
+          <div class="pricing-header">
+            <h3>Free</h3>
+            <div class="pricing-price">
+              <span class="price-amount">₹0</span>
+              <span class="price-period">/month</span>
+            </div>
+            <p class="pricing-desc">Perfect for getting started</p>
+          </div>
+          <ul class="pricing-features">
+            <li><span class="check">✓</span> 5,000 words/month</li>
+            <li><span class="check">✓</span> Chrome Extension only</li>
+            <li><span class="check">✓</span> Hindi + English</li>
+            <li><span class="check">✓</span> General domain mode</li>
+            <li><span class="check">✓</span> 10 snippets</li>
+            <li><span class="check">✓</span> Privacy mode</li>
+            <li class="disabled"><span class="x">✗</span> Offline mode</li>
+            <li class="disabled"><span class="x">✗</span> Native desktop/mobile app</li>
+          </ul>
+          <a href="#" class="btn btn-outline btn-block">Get Started Free</a>
+          <small class="pricing-note">Bring your own Groq API key</small>
+        </div>
+
+        <!-- Pro Tier -->
+        <div class="pricing-card pricing-featured">
+          <div class="pricing-popular">Most Popular</div>
+          <div class="pricing-header">
+            <h3>Pro</h3>
+            <div class="pricing-price">
+              <span class="price-amount">₹149</span>
+              <span class="price-period">/month</span>
+            </div>
+            <p class="pricing-desc">For power users & professionals</p>
+          </div>
+          <ul class="pricing-features">
+            <li><span class="check">✓</span> <strong>Unlimited</strong> words</li>
+            <li><span class="check">✓</span> All platforms (Chrome, Android, Desktop)</li>
+            <li><span class="check">✓</span> All 10 Indian languages</li>
+            <li><span class="check">✓</span> All 6 domain modes</li>
+            <li><span class="check">✓</span> Unlimited snippets</li>
+            <li><span class="check">✓</span> Privacy mode</li>
+            <li><span class="check">✓</span> Offline mode (VoiceFlow Edge)</li>
+            <li><span class="check">✓</span> Priority support</li>
+          </ul>
+          <a href="#" class="btn btn-primary btn-block">Upgrade to Pro</a>
+          <small class="pricing-note">No API key needed — we manage everything</small>
+        </div>
+
+        <!-- Enterprise Tier -->
+        <div class="pricing-card">
+          <div class="pricing-header">
+            <h3>Enterprise</h3>
+            <div class="pricing-price">
+              <span class="price-amount">Custom</span>
+            </div>
+            <p class="pricing-desc">For teams & organizations</p>
+          </div>
+          <ul class="pricing-features">
+            <li><span class="check">✓</span> Everything in Pro</li>
+            <li><span class="check">✓</span> SSO / SAML integration</li>
+            <li><span class="check">✓</span> Admin dashboard</li>
+            <li><span class="check">✓</span> Custom domain vocabularies</li>
+            <li><span class="check">✓</span> Org-shared snippets</li>
+            <li><span class="check">✓</span> Enforced privacy policy</li>
+            <li><span class="check">✓</span> DPDP compliance audit</li>
+            <li><span class="check">✓</span> Dedicated support & SLA</li>
+          </ul>
+          <a href="#" class="btn btn-outline btn-block">Contact Sales</a>
+          <small class="pricing-note">Volume pricing available</small>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== FAQ ==================== -->
+  <section class="faq" id="faq">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-badge">FAQ</span>
+        <h2 class="section-title">Questions?<br><span class="gradient-text">We've Got Answers.</span></h2>
+      </div>
+
+      <div class="faq-grid">
+        <div class="faq-item">
+          <button class="faq-question" id="faq-q-1">
+            <span>How does VoiceFlow type into other apps?</span>
+            <svg class="faq-chevron" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <div class="faq-answer" id="faq-a-1">
+            <p>On Chrome, our extension injects text directly into the focused text field using the browser's DOM API. On desktop (Electron app), we use OS-level accessibility APIs — AXUIElement on macOS and UI Automation on Windows. On Android, we use the Accessibility Service + InputConnection API, similar to how Gboard and SwiftKey work.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" id="faq-q-2">
+            <span>Is my voice data stored on your servers?</span>
+            <svg class="faq-chevron" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <div class="faq-answer" id="faq-a-2">
+            <p>No. Audio is sent to Groq's API for real-time processing and is immediately discarded after the transcript is generated. We never store audio recordings. On Privacy Mode (or Offline Mode), processing happens 100% on your device — nothing leaves your computer.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" id="faq-q-3">
+            <span>What is Tanglish / Tenglish support?</span>
+            <svg class="faq-chevron" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <div class="faq-answer" id="faq-a-3">
+            <p>Many Indians mix their mother tongue with English mid-sentence. Tanglish is Tamil+English, Tenglish is Telugu+English, Hinglish is Hindi+English. VoiceFlow's AI is specifically tuned to handle this code-switching naturally, preserving both languages exactly as spoken.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" id="faq-q-4">
+            <span>Does it work offline?</span>
+            <svg class="faq-chevron" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <div class="faq-answer" id="faq-a-4">
+            <p>Yes! Our Pro plan includes VoiceFlow Edge — an on-device AI pipeline using whisper.cpp (Whisper Small, 75MB) and Llama 3.2 1B (800MB). It works without internet, perfect for rural India or privacy-sensitive users. It auto-activates when network is unavailable.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" id="faq-q-5">
+            <span>Why do you need Accessibility Permission?</span>
+            <svg class="faq-chevron" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <div class="faq-answer" id="faq-a-5">
+            <p>Accessibility Permission is required so VoiceFlow can detect which text field you're in and type text into it — across ANY app on your device. This is the same permission Gboard, SwiftKey, and every keyboard app requires. We never read your screen content. Our content script is open source for verification.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" id="faq-q-6">
+            <span>Is the Groq API really free?</span>
+            <svg class="faq-chevron" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <div class="faq-answer" id="faq-a-6">
+            <p>Yes. Groq offers generous free tiers: 7,200 seconds of Whisper audio/day and 14,400 Llama 3.3 requests/day. A user dictating ~50 times/day at ~20 seconds each uses only ~1,000 seconds — well within free limits. Pro users don't need their own API key; VoiceFlow manages it.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== CTA ==================== -->
+  <section class="cta">
+    <div class="container">
+      <div class="cta-card">
+        <div class="cta-bg-effects">
+          <div class="cta-orb cta-orb-1"></div>
+          <div class="cta-orb cta-orb-2"></div>
+        </div>
+        <div class="cta-content">
+          <h2>Ready to Speak Your<br><span class="gradient-text">Mother Tongue?</span></h2>
+          <p>Join 500+ beta testers across India already using VoiceFlow to dictate 3x faster than typing.</p>
+          <div class="cta-actions">
+            <a href="#" class="btn btn-white btn-lg">
+              <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"/><path d="M19 10v2a7 7 0 0 1-14 0v-2"/></svg>
+              Install Chrome Extension
+            </a>
+            <a href="#" class="btn btn-ghost-light btn-lg">
+              Join Android Waitlist →
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== FOOTER ==================== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="nav-logo">
+            <div class="nav-logo-icon">
+              <svg viewBox="0 0 32 32" width="28" height="28" fill="none">
+                <circle cx="16" cy="16" r="15" fill="url(#navGrad)" opacity="0.15"/>
+                <path d="M16 6a4 4 0 0 0-4 4v6a4 4 0 0 0 8 0v-6a4 4 0 0 0-4-4z" stroke="url(#navGrad)" stroke-width="2.5" fill="none"/>
+                <path d="M22 14v2a6 6 0 0 1-12 0v-2" stroke="url(#navGrad)" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+                <line x1="16" y1="22" x2="16" y2="26" stroke="url(#navGrad)" stroke-width="2.5" stroke-linecap="round"/>
+              </svg>
+            </div>
+            <span class="nav-logo-text">VoiceFlow<span class="nav-logo-accent"> India</span></span>
+          </div>
+          <p class="footer-desc">The voice keyboard of Bharat. Speak in your mother tongue, type everywhere.</p>
+        </div>
+        <div class="footer-links">
+          <h4>Product</h4>
+          <a href="#features">Features</a>
+          <a href="#pricing">Pricing</a>
+          <a href="#languages">Languages</a>
+          <a href="#faq">FAQ</a>
+        </div>
+        <div class="footer-links">
+          <h4>Company</h4>
+          <a href="#">About Us</a>
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Service</a>
+          <a href="#">DPDP Compliance</a>
+        </div>
+        <div class="footer-links">
+          <h4>Connect</h4>
+          <a href="#">Twitter / X</a>
+          <a href="#">LinkedIn</a>
+          <a href="#">Discord</a>
+          <a href="#">support@voiceflow.in</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2026 VoiceFlow India. Made with ❤️ in Chennai.</span>
+        <span>🇮🇳 Built for Bharat</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,486 @@
+/* ============================================================
+   VoiceFlow India — Cyber-Dark Neon Edition
+   Inspired by Dribbble: Voice Controlled AI Design
+   ============================================================ */
+
+:root {
+  --bg-deep: #050505;
+  --bg-card: rgba(255, 255, 255, 0.03);
+  --primary-neon: #8B5CF6; /* Electric Purple */
+  --secondary-neon: #EC4899; /* Pink */
+  --accent-blue: #3B82F6;
+  --accent-orange: #F43F5E;
+  
+  --text-primary: #FFFFFF;
+  --text-muted: #94A3B8;
+  --border-glass: rgba(255, 255, 255, 0.08);
+
+  --font-main: 'Inter', system-ui, -apple-system, sans-serif;
+  --radius-xl: 40px;
+  --radius-lg: 24px;
+}
+
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+}
+
+body {
+  font-family: var(--font-main);
+  background: var(--bg-deep);
+  color: var(--text-primary);
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+/* --- NOISE TEXTURE --- */
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("https://grainy-gradients.vercel.app/noise.svg");
+  opacity: 0.15;
+  pointer-events: none;
+  z-index: 9999;
+}
+
+.container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 40px;
+}
+
+/* ==================== GLOWING ORBS ==================== */
+.orb {
+  position: fixed;
+  border-radius: 50%;
+  filter: blur(120px);
+  z-index: -1;
+  opacity: 0.4;
+  pointer-events: none;
+}
+
+.orb-purple {
+  top: -10%;
+  right: -5%;
+  width: 600px;
+  height: 600px;
+  background: radial-gradient(circle, var(--primary-neon), transparent);
+}
+
+.orb-pink {
+  bottom: 10%;
+  left: -10%;
+  width: 500px;
+  height: 500px;
+  background: radial-gradient(circle, var(--secondary-neon), transparent);
+}
+
+.orb-blue {
+  top: 40%;
+  right: 20%;
+  width: 400px;
+  height: 400px;
+  background: radial-gradient(circle, var(--accent-blue), transparent);
+}
+
+/* ==================== NAVIGATION ==================== */
+.nav-cyber {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  padding: 32px 0;
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.nav-scrolled {
+  padding: 16px 0;
+  background: rgba(5, 5, 5, 0.6);
+  backdrop-filter: blur(20px);
+  border-bottom: 1px solid var(--border-glass);
+}
+
+.nav-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.nav-logo-cyber {
+  font-weight: 800;
+  font-size: 24px;
+  letter-spacing: -0.04em;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.logo-dot {
+  width: 10px;
+  height: 10px;
+  background: var(--primary-neon);
+  border-radius: 50%;
+  box-shadow: 0 0 15px var(--primary-neon);
+}
+
+.nav-links-cyber {
+  display: flex;
+  gap: 40px;
+}
+
+.nav-links-cyber a {
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--text-muted);
+  transition: color 0.3s;
+}
+
+.nav-links-cyber a:hover { color: #fff; }
+
+.btn-neon-pill {
+  padding: 12px 28px;
+  border-radius: 100px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid var(--border-glass);
+  color: #fff;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s;
+  backdrop-filter: blur(10px);
+}
+
+.btn-neon-pill:hover {
+  background: var(--primary-neon);
+  border-color: var(--primary-neon);
+  box-shadow: 0 0 20px var(--primary-neon);
+}
+
+/* ==================== HERO ==================== */
+.hero-cyber {
+  position: relative;
+  padding: 220px 0 100px;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.hero-h1 {
+  font-size: clamp(64px, 10vw, 120px);
+  font-weight: 900;
+  line-height: 0.9;
+  letter-spacing: -0.05em;
+  margin-bottom: 32px;
+}
+
+.hero-h1 span {
+  background: linear-gradient(to right, var(--primary-neon), var(--secondary-neon));
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.hero-p {
+  font-size: 20px;
+  color: var(--text-muted);
+  max-width: 600px;
+  margin: 0 auto 48px;
+}
+
+/* ==================== SILK WAVES ==================== */
+.silk-waves-container {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 300px;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.silk-wave-svg {
+  width: 100%;
+  height: 100%;
+}
+
+/* ==================== MIC SPHERE ==================== */
+.mic-action-center {
+  margin-top: -50px;
+  position: relative;
+  z-index: 20;
+}
+
+.mic-sphere {
+  width: 120px;
+  height: 120px;
+  background: rgba(255, 255, 255, 0.04);
+  border-radius: 50%;
+  border: 1px solid rgba(255,255,255,0.15);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 30px 60px rgba(0,0,0,0.3), inset 0 0 10px rgba(255,255,255,0.1);
+}
+
+.orb-dynamic {
+  position: absolute;
+  inset: -1px;
+  background: radial-gradient(circle, #8b5cf6 0%, #3b82f6 100%);
+  opacity: 0.8;
+  transition: all 0.4s ease;
+}
+
+/* Specific class for active state triggered by App.jsx */
+.mic-sphere.active .orb-dynamic {
+  background: url('/icons/Siri.gif') center center / cover no-repeat;
+  background-color: #000;
+  transform: scale(1.3);
+  opacity: 1;
+}
+
+.orb-glass-shine {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at 30% 30%, rgba(255,255,255,0.4) 0%, rgba(255,255,255,0) 60%);
+  z-index: 5;
+  pointer-events: none;
+}
+
+
+.mic-sphere::after {
+  content: "";
+  position: absolute;
+  inset: -15px;
+  border: 1px solid rgba(255,255,255,0.15);
+  border-radius: 50%;
+  animation: pulse-ring 2.5s infinite;
+  z-index: 0;
+}
+
+@keyframes pulse-ring {
+  0% { transform: scale(1); opacity: 0.5; }
+  100% { transform: scale(1.5); opacity: 0; }
+}
+
+/* ==================== CARDS ==================== */
+.cyber-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 32px;
+  margin-top: 80px;
+}
+
+.cyber-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-glass);
+  padding: 48px;
+  border-radius: var(--radius-lg);
+  backdrop-filter: blur(10px);
+  transition: all 0.4s;
+}
+
+.cyber-card:hover {
+  border-color: var(--primary-neon);
+  transform: translateY(-8px);
+}
+
+.cyber-card-label {
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--primary-neon);
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  margin-bottom: 12px;
+  display: block;
+}
+
+.cyber-card-title {
+  font-size: 32px;
+  font-weight: 800;
+  margin-bottom: 12px;
+}
+
+/* ==================== FOOTER ==================== */
+.cyber-footer {
+  padding: 160px 0;
+  text-align: center;
+  border-top: 1px solid var(--border-glass);
+  margin-top: 160px;
+}
+
+.cyber-footer h2 {
+    font-size: 80px;
+    font-weight: 900;
+    letter-spacing: -0.04em;
+    margin-bottom: 40px;
+}
+
+/* ==================== LIVE STATUS INDICATOR ==================== */
+.live-status-pill {
+  position: fixed;
+  bottom: 40px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 5000;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 24px;
+  background: rgba(5, 5, 5, 0.8);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid var(--primary-neon);
+  border-radius: 100px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5), 0 0 20px rgba(139, 92, 246, 0.3);
+  color: #fff;
+  font-size: 13px;
+  letter-spacing: 0.1em;
+  pointer-events: none;
+}
+
+.recording-dot {
+  width: 10px;
+  height: 10px;
+  background: #ff4b4b;
+  border-radius: 50%;
+  box-shadow: 0 0 10px #ff4b4b;
+  animation: rec-glow 1.5s infinite ease-in-out;
+}
+
+@keyframes rec-glow {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.5; transform: scale(1.2); }
+}
+
+/* ==================== SETUP SECTION ==================== */
+.setup-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 32px;
+}
+
+.setup-step-card {
+  padding: 40px;
+  position: relative;
+  overflow: hidden;
+  flex: 0 0 calc(33.333% - 32px);
+  max-width: calc(33.333% - 32px);
+  min-height: 280px;
+  display: flex;
+  flex-direction: column;
+  min-width: 300px;
+}
+
+@media (max-width: 1100px) {
+  .setup-step-card {
+    flex: 0 0 calc(50% - 32px);
+    max-width: calc(50% - 32px);
+  }
+  .cyber-cards-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 992px) {
+  .hero-h1 {
+    font-size: clamp(48px, 8vw, 84px);
+  }
+  .cyber-footer h2 {
+    font-size: 60px;
+  }
+  .container {
+    padding: 0 24px;
+  }
+}
+
+@media (max-width: 768px) {
+  .setup-step-card {
+    flex: 1 1 100%;
+    max-width: 100%;
+    padding: 32px;
+    min-height: auto;
+  }
+  .cyber-cards-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+  .nav-links-cyber {
+    display: none; /* Hide links on mobile for simplicity, or could be a burger menu */
+  }
+  .hero-cyber {
+    padding: 160px 0 80px;
+  }
+  .hero-h1 {
+    font-size: 48px;
+  }
+  .hero-p {
+    font-size: 16px;
+  }
+  .cyber-card {
+    padding: 32px;
+  }
+  .cyber-footer h2 {
+    font-size: 40px;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    padding: 0 20px;
+  }
+  .hero-h1 {
+    font-size: 40px;
+  }
+  .btn-neon-pill {
+    padding: 10px 20px;
+    font-size: 13px;
+  }
+  .nav-logo-cyber {
+    font-size: 20px;
+  }
+}
+
+/* ==================== ADDITIONAL GRIDS ==================== */
+.grid-3-col {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.pipeline-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  text-align: left;
+}
+
+@media (max-width: 1024px) {
+  .pipeline-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+  .grid-3-col {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 640px) {
+  .pipeline-grid, .grid-3-col {
+    grid-template-columns: 1fr;
+  }
+}
+

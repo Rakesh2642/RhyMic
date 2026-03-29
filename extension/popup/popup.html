@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=400">
+  <title>RhyMic - Settings</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="vf-shell">
+    <div class="vf-bg-glow vf-bg-glow-left"></div>
+    <div class="vf-bg-glow vf-bg-glow-right"></div>
+
+    <header class="vf-header">
+      <div class="vf-brand">
+        <div class="vf-brand-dot"></div>
+        <div>
+          <h1>RhyMic</h1>
+          <p>AI Voice Keyboard for <strong>RHYSETECH</strong></p>
+        </div>
+      </div>
+      <div class="vf-status-badge" id="statusBadge">
+        <span class="vf-status-dot"></span>
+        <span id="statusText">Ready</span>
+      </div>
+    </header>
+
+    <main class="vf-main">
+      <section class="vf-card vf-card-hero">
+        <button class="vf-record-btn" id="recordBtn" type="button">
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"/>
+            <path d="M19 10v2a7 7 0 0 1-14 0v-2"/>
+            <line x1="12" y1="19" x2="12" y2="23"/>
+            <line x1="8" y1="23" x2="16" y2="23"/>
+          </svg>
+          <span>Start Dictation</span>
+        </button>
+        <p class="vf-shortcut" id="shortcutHint" title="Click to copy shortcut">Ctrl + Shift + Space</p>
+        <p class="vf-assist-text" id="assistText">Press start and speak naturally. We will clean and format your text.</p>
+        <div class="vf-noise-meter" id="noiseMeter">
+          <div class="vf-noise-head">
+            <span>Mic Noise Meter</span>
+            <span id="noiseValue">Idle</span>
+          </div>
+          <div class="vf-noise-track">
+            <div class="vf-noise-fill" id="noiseFill"></div>
+          </div>
+          <p class="vf-noise-warning" id="noiseWarning">Too noisy. Move closer to mic or reduce background noise.</p>
+        </div>
+      </section>
+
+      <section class="vf-card vf-stats" id="statsCard">
+        <div class="vf-stat-item">
+          <span class="vf-stat-value" id="wordsToday">0</span>
+          <span class="vf-stat-label">Words Today</span>
+        </div>
+        <div class="vf-stat-divider"></div>
+        <div class="vf-stat-item">
+          <span class="vf-stat-value" id="wordsWeek">0</span>
+          <span class="vf-stat-label">This Week</span>
+        </div>
+        <div class="vf-stat-divider"></div>
+        <div class="vf-stat-item">
+          <span class="vf-stat-value" id="timeSaved">0m</span>
+          <span class="vf-stat-label">Time Saved</span>
+        </div>
+      </section>
+
+      <section class="vf-card vf-settings">
+        <div class="vf-field">
+          <label class="vf-label" for="apiKey">Groq API Key</label>
+          <div class="vf-input-group">
+            <input type="password" id="apiKey" class="vf-input" placeholder="gsk_xxxxxxxxxxxxxxxx" autocomplete="off">
+            <button class="vf-icon-btn" id="toggleApiKey" type="button" title="Show/Hide">
+              <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
+            </button>
+          </div>
+          <a href="https://console.groq.com/keys" target="_blank" class="vf-help-link">Get a free API key from Groq</a>
+        </div>
+
+        <div class="vf-field">
+          <label class="vf-label" for="language">Primary Language</label>
+          <select id="language" class="vf-select">
+            <option value="auto">Auto-Detect</option>
+            <option value="te">Telugu</option>
+            <option value="ta">Tamil</option>
+            <option value="kn">Kannada</option>
+            <option value="ml">Malayalam</option>
+            <option value="hi">Hindi</option>
+            <option value="en">English</option>
+            <option value="mr">Marathi</option>
+            <option value="bn">Bengali</option>
+            <option value="gu">Gujarati</option>
+            <option value="pa">Punjabi</option>
+          </select>
+        </div>
+
+        <div class="vf-field">
+          <label class="vf-label" for="autoLanguageBias">Auto-Detect Bias</label>
+          <select id="autoLanguageBias" class="vf-select">
+            <option value="auto">Balanced</option>
+            <option value="te">Prefer Telugu</option>
+            <option value="ta">Prefer Tamil</option>
+            <option value="kn">Prefer Kannada</option>
+            <option value="ml">Prefer Malayalam</option>
+            <option value="hi">Prefer Hindi</option>
+            <option value="en">Prefer English</option>
+          </select>
+        </div>
+
+        <div class="vf-field">
+          <span class="vf-label">Output Mode</span>
+          <div class="vf-toggle-group">
+            <button class="vf-toggle-btn active" data-output-mode="normal" id="modeNormal" type="button">Normal</button>
+            <button class="vf-toggle-btn" data-output-mode="developer" id="modeDeveloper" type="button">Developer</button>
+          </div>
+        </div>
+
+        <button class="vf-save-btn" id="saveBtn" type="button">Save Settings</button>
+      </section>
+    </main>
+
+    <footer class="vf-footer">
+      <span>RhyMic v1.0</span>
+      <a href="https://rhysetech.com" target="_blank">rhysetech.com</a>
+    </footer>
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>
