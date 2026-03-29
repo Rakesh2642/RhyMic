@@ -1,16 +1,56 @@
-# React + Vite
+# RhyMic - AI Voice Keyboard (Website & Landing Page)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+RhyMic is a powerful AI-driven voice transcription tool for developers and professionals, built by **RHYSETECH**. This repository contains the high-fidelity landing page and distribution assets for the RhyMic ecosystem.
 
-Currently, two official plugins are available:
+## 🚀 Key Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+- **Cyber-Dark Neon Design**: A premium, interactive landing page built with React and Vite, featuring silk-wave animations and glassmorphism.
+- **Direct Extension Download**: One-click download of the latest `extension.zip` for instant Chrome installation.
+- **Unified Setup Guide**: A built-in, step-by-step interactive installation process to minimize setup friction.
+- **Performance Benchmarking**: Visual comparisons between standard typing speeds and RhyMic's AI-enhanced transcription flow.
+- **Responsive Architecture**: Fully optimized for Desktop, Tablet, and Mobile viewports.
 
-## React Compiler
+## 🛠 Project Structure (Website)
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- `src/` - React source files.
+  - `App.jsx` - Main landing page orchestration and component logic.
+  - `index.css` - Custom design system, typography, and responsive media queries.
+- `public/` - Static assets.
+  - `extension.zip` - The core browser extension package for distribution.
+  - `icons/` - Visual assets used across the interface.
 
-## Expanding the ESLint configuration
+## 📦 Local Development
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+To run this website locally:
+
+1. **Clone the repository**:
+   ```bash
+   git clone https://github.com/Rakesh2642/RhyMic.git
+   cd RhyMic/website
+   ```
+
+2. **Install dependencies**:
+   ```bash
+   npm install
+   ```
+
+3. **Start the development server**:
+   ```bash
+   npm run dev
+   ```
+
+## 🚀 Deployment
+
+The site is configured for standard Vite deployment. To generate a production bundle:
+
+```bash
+npm run build
+```
+The output will be located in the `website/dist/` directory.
+
+## 📄 Ownership & License
+
+Internal project owned and maintained by **RHYSETECH Developers**.
+
+---
+Built with ❤️ for the future of high-speed voice-to-text.
